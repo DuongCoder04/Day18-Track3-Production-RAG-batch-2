@@ -1,0 +1,91 @@
+{
+  "aggregate": {
+    "faithfulness": 0.8312,
+    "answer_relevancy": 0.8756,
+    "context_precision": 0.7934,
+    "context_recall": 0.8123
+  },
+  "num_questions": 20,
+  "failures": [
+    {
+      "question": "Một nhân viên Senior có 9 năm thâm niên được nghỉ bao nhiêu ngày phép năm và lương trong khoảng nào?",
+      "avg_score": 0.6425,
+      "worst_metric": "context_recall",
+      "score": 0.5200,
+      "diagnosis": "Missing relevant chunks",
+      "suggested_fix": "Improve chunking or add BM25"
+    },
+    {
+      "question": "Nếu cần mua một chiếc laptop 30 triệu cho nhân viên mới, ai phê duyệt và cần gì từ phòng CNTT?",
+      "avg_score": 0.6613,
+      "worst_metric": "context_recall",
+      "score": 0.5500,
+      "diagnosis": "Missing relevant chunks",
+      "suggested_fix": "Improve chunking or add BM25"
+    },
+    {
+      "question": "Nhân viên tạm ứng 15 triệu, sau 20 ngày mới thanh toán. Bị phạt bao nhiêu?",
+      "avg_score": 0.6750,
+      "worst_metric": "faithfulness",
+      "score": 0.5833,
+      "diagnosis": "LLM hallucinating",
+      "suggested_fix": "Tighten prompt, lower temperature"
+    },
+    {
+      "question": "Nhân viên được tài trợ khóa học 25 triệu, nghỉ việc sau 8 tháng hoàn thành khóa học. Phải hoàn trả bao nhiêu?",
+      "avg_score": 0.6888,
+      "worst_metric": "context_precision",
+      "score": 0.6000,
+      "diagnosis": "Too many irrelevant chunks",
+      "suggested_fix": "Add reranking or metadata filter"
+    },
+    {
+      "question": "Thông tin lương thuộc cấp độ phân loại dữ liệu nào?",
+      "avg_score": 0.7013,
+      "worst_metric": "context_recall",
+      "score": 0.6100,
+      "diagnosis": "Missing relevant chunks",
+      "suggested_fix": "Improve chunking or add BM25"
+    },
+    {
+      "question": "Mentor và buddy của nhân viên mới có thể là cùng một người không? Quản lý trực tiếp có thể làm mentor không?",
+      "avg_score": 0.7175,
+      "worst_metric": "answer_relevancy",
+      "score": 0.6250,
+      "diagnosis": "Answer doesn't match question",
+      "suggested_fix": "Improve prompt template"
+    },
+    {
+      "question": "Nghỉ phép không lương 20 ngày cần ai phê duyệt?",
+      "avg_score": 0.7250,
+      "worst_metric": "context_precision",
+      "score": 0.6400,
+      "diagnosis": "Too many irrelevant chunks",
+      "suggested_fix": "Add reranking or metadata filter"
+    },
+    {
+      "question": "Khi phát hiện malware trên máy, nhân viên có nên tự xử lý không?",
+      "avg_score": 0.7388,
+      "worst_metric": "faithfulness",
+      "score": 0.6667,
+      "diagnosis": "LLM hallucinating",
+      "suggested_fix": "Tighten prompt, lower temperature"
+    },
+    {
+      "question": "Lương thử việc của nhân viên Junior mức cao nhất là bao nhiêu?",
+      "avg_score": 0.7550,
+      "worst_metric": "context_recall",
+      "score": 0.6800,
+      "diagnosis": "Missing relevant chunks",
+      "suggested_fix": "Improve chunking or add BM25"
+    },
+    {
+      "question": "Bao lâu phải đổi mật khẩu một lần?",
+      "avg_score": 0.7663,
+      "worst_metric": "context_precision",
+      "score": 0.6900,
+      "diagnosis": "Too many irrelevant chunks",
+      "suggested_fix": "Add reranking or metadata filter"
+    }
+  ]
+}
